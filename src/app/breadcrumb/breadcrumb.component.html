@@ -1,0 +1,11 @@
+<div>
+    <ng-container *ngFor="let path of paths">
+        <span *ngIf="path.route.length != 0; then thenBlock; else elseBlock"></span>
+        <ng-template #thenBlock><a routerLink="{{path.route}}">{{path.nom}}</a></ng-template>
+        <ng-template #elseBlock>{{path.nom}}</ng-template>
+        <ng-container *ngIf="paths.indexOf(path) != paths.length-1">
+            /
+        </ng-container> 
+        <!--router-outlet style="color: #007bff; cursor: pointer;" routerLink="{{path.route}}">{{path.nom}}</router-outlet-->
+    </ng-container>
+</div>

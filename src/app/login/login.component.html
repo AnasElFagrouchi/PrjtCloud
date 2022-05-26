@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+<div>
+    Login : <input [(ngModel)]="login" type="text">
+</div>
+<div>
+    Password : <input [(ngModel)]="password" type="password">
+</div>
+<input type="submit" (click)="submit();" value="Se connecter">
+
+<div *ngIf="errorMessage != ''" class="alert alert-danger" role="alert">
+    {{errorMessage}}
+</div>

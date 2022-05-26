@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Nouveau Sujet </h1>
+<div mat-dialog-content>
+  <p>Saisissez un nouveau sujet</p>
+    <input type="text" [(ngModel)]="data.sujet">
+
+</div>
+<div mat-dialog-actions>
+  <div class="alert-danger" role="alert">
+    {{errorMessage}}
+  </div>
+  <button (click)="onNoClick()"  mat-raised-button color="accent" >Fermer</button>
+  <button (click)="onClick()" mat-flat-button color="primary" >Créer le sujet</button>
+</div>
+
